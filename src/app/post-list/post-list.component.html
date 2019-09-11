@@ -1,0 +1,11 @@
+<li [ngClass]="{'list-group-item':true,
+                'list-group-item-success': getColorGreen(),
+                'list-group-item-danger': getColorRed ()}" >
+    <h1 >{{ postTitle }} <h4 style="float: right; ">{{postReated_at | date :'short'}}</h4> </h1>
+    <p>{{postContent}} </p>
+    <button class="btn btn-success" 
+              (click)="onLove()" >Love It!</button>
+    <button class="btn btn-danger" 
+              style="margin-left: 5px"
+              (click)="onDown()" >Don't love it!</button>
+</li>
